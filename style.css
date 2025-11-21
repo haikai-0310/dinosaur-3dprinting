@@ -1,0 +1,65 @@
+/* サイト全体のスタイル (body) */
+body {
+    /* 背景画像の設定（CSSに書くのが主流です） */
+    background-image: url("background.jpg");
+    background-size: cover; /* 画面いっぱいに広げる */
+    background-attachment: fixed; /* スクロールしても背景を固定する */
+
+    /* 3. フォントを設定する */
+    font-family: Arial, sans-serif; 
+    
+    /* 4. マージン（余白）をリセットする */
+    margin: 0;
+    padding: 20px;
+    
+    /* スマホで見た時に文字色が黒だと背景によっては見にくいので、基本色を指定 */
+    color: #333; 
+}
+
+/* 見出しの共通設定 */
+h1, h2, h3, h4 {
+    text-align: center; /* 文字を中央揃え */
+    font-weight: bold;  /* 文字を太く */
+    color: #000000;     /* 色（黒） */
+}
+
+/* 個別のサイズ設定 */
+h1 { font-size: 2.5em; }
+h2 { font-size: 2.0em; } /* h1より少し小さく調整 */
+h3 { font-size: 1.5em; } /* バランスを見て調整 */
+h4 { font-size: 1.0em; }
+
+/* 表の位置設定 */
+table {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.9); /* 表自体も少し白くして見やすく */
+    border-collapse: collapse; /* 枠線の隙間をなくす */
+    max-width: 100%; /* スマホからはみ出さないように */
+}
+
+th, td {
+    padding: 10px; /* 表の中の文字が窮屈にならないように */
+    border: 1px solid #333;
+}
+
+/* ★重要：画像のスマホ対応設定 */
+img {
+    display: block;     /* ブロック要素にして */
+    margin: 20px auto;  /* 中央揃えにする */
+    max-width: 100%;    /* 親要素（画面）より大きくならないようにする */
+    height: auto;       /* 高さは自動で比率を保つ */
+    border-radius: 10px; /* お好みで角丸に */
+}
+
+/* ★今回の主役：説明文用の白い箱 */
+.description-box {
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    background-color: rgba(255, 255, 255, 0.95); /* 白背景（少しだけ透けさせる） */
+    padding: 20px;       /* 文字の周りに余白 */
+    margin: 20px auto;   /* 上下に隙間を空けて、中央配置 */
+    max-width: 600px;    /* パソコンで見た時に横に伸びすぎないように */
+    border-radius: 10px; /* 角を丸く */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* 少し影をつけて浮かせる（リッチに見える！） */
+    line-height: 1.6;    /* 行間を広げて読みやすく */
+}
